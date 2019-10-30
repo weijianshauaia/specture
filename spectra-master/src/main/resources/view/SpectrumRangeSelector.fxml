@@ -54,6 +54,10 @@
                                     <Spinner fx:id="SpinnerBegin" />
                                     <Label text="Ending Wavelength" />
                                     <Spinner fx:id="SpinnerEnd" />
+                               <!--      <Label text="Starting Height" />
+                                    <Spinner fx:id="SpinnerBegin" /> -->
+                                 <!--    <Label text="Ending Wavelength" />
+                                    <Spinner fx:id="SpinnerEnd" /> -->
                                  </children>
                               </VBox>
                            </children>
@@ -72,6 +76,7 @@
                      <children>
                         <Slider fx:id="SliderBegin" GridPane.columnIndex="1" />
                         <Slider fx:id="SliderEnd" value="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <!-- <Slider fx:id="SliderY"  GridPane.columnIndex="1" GridPane.rowIndex="2"/> -->
                         <Label alignment="CENTER" text="Starting Wavelength">
                            <GridPane.margin>
                               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
@@ -82,6 +87,17 @@
                               <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                            </GridPane.margin>
                         </Label>
+                       <!--  <Label alignment="CENTER" text="Starting Wavelength">
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                        </Label> -->
+                        <!-- <Label alignment="CENTER" text="StartingHeigth" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </GridPane.margin>
+                         
+                        </Label> -->
                      </children>
                      <VBox.margin>
                         <Insets right="8.0" />

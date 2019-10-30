@@ -144,6 +144,7 @@ public class TabController extends Tab implements Initializable {
 		// Setup lineChart
 		//lineChart.getData().add(series);
 		lineChart.setLegendVisible(false);
+		lineChart.setTitle("Raman");
 		lineChart.autosize();
 
 		// xAxis.setUpperBound(3000);

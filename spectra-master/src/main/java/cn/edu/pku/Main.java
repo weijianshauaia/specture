@@ -77,6 +77,7 @@ public class Main extends Application {
 			//primaryStage.show();
 			
 			// Set welcome interface
+			 
 			WelcomeStage welcome = new WelcomeStage();
 			welcome.welcome_stage(primaryStage, __iconpath);
 			 

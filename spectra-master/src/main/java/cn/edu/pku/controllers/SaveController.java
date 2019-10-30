@@ -52,6 +52,7 @@ public class SaveController extends SplitPane implements Initializable {
 
 	@FXML
 	private Spinner<Double> SpinnerEnd;
+	private Spinner<Double> SpinnerY;
 
 	private Series<Number, Number> series;
 
@@ -62,9 +63,11 @@ public class SaveController extends SplitPane implements Initializable {
 
 	private int endIndex; // End index slider and spinner, in order to get the
 						  // x-axis data from xAxisSpinner
+	private int ybeginIndex; // Begin index slider and spinner, in order to get
+	// the y-axis data from xAxisSpinner
 
 	private ArrayList<Double> xAxisDataArrayList; // Store the x-axis data from
-
+	private ArrayList<Double> yAxisDataArrayList;
 
 	final Stage stage = new Stage();
 
@@ -79,7 +82,7 @@ public class SaveController extends SplitPane implements Initializable {
 
 		try {
 			Parent root = loader.load();
-			stage.setTitle("Save");
+			stage.setTitle("光谱范围选择");
 			stage.setScene(new Scene(root));
 			stage.show();
 		} catch (IOException e) {
@@ -108,6 +111,7 @@ public class SaveController extends SplitPane implements Initializable {
 		lineChartPreview.setCreateSymbols(false);
 		lineChartPreview.setLegendVisible(false);
 		lineChartPreview.getXAxis().setAutoRanging(false);;
+		lineChartPreview.getYAxis().setAutoRanging(true);;
 
 		// Set slider range and initial value
 		SliderBegin.setMax(this.seriesSize - 1);
@@ -123,7 +127,12 @@ public class SaveController extends SplitPane implements Initializable {
 		for (int i = 0; i < seriesSize; i++) {
 			xAxisDataArrayList.add(Double.parseDouble(series.getData().get(i).getXValue().toString()));
 		}
-
+		// Setup y坐标的数组内容
+		
+		yAxisDataArrayList = new ArrayList<>();
+		for (int i = 0; i < seriesSize; i++) {
+			yAxisDataArrayList.add(Double.parseDouble(series.getData().get(i).getYValue().toString()));
+		}
 		// Set spinner's textField editable
 		// SpinnerBegin.setEditable(true);
 		// SpinnerEnd.setEditable(true);
